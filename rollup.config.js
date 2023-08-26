@@ -20,6 +20,8 @@ import { obfuscator } from "rollup-obfuscator";
 // https://www.npmjs.com/package/rollup-plugin-dts
 import { dts } from "rollup-plugin-dts";
 
+import pkg from './package.json'  assert { type: 'json' }
+
 export default [
   {
   input: "src/index.ts", // pack entry
@@ -57,7 +59,7 @@ export default [
       log: false,
       renameGlobals: false,// 不要启动 通过声明启用全局变量和函数名称的混淆。 
       rotateStringArray: false,
-      selfDefending: true,// 此选项使输出代码能够抵抗格式化和变量重命名。如果试图在混淆代码上使用JavaScript美化器，代码将不再起作用，使得理解和修改它变得更加困难。需要紧凑代码设置。
+      selfDefending: false,// 此选项使输出代码能够抵抗格式化和变量重命名。如果试图在混淆代码上使用JavaScript美化器，代码将不再起作用，使得理解和修改它变得更加困难。需要紧凑代码设置。
       shuffleStringArray: false,
       splitStrings: false,
       splitStringsChunkLength: 10,
@@ -71,6 +73,7 @@ export default [
       // }),
     }) : null,
   ],
+  external: Object.keys(pkg.dependencies)
 },
 {
   input: "./dist/index.d.ts",
