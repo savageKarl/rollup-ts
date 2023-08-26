@@ -73,7 +73,7 @@ export default [
       // }),
     }) : null,
   ],
-  external: Object.keys(pkg.dependencies)
+  external: Object.keys(pkg.dependencies || {})
 },
 {
   input: "./dist/index.d.ts",
