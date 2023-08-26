@@ -6,7 +6,11 @@
   "module": "./dist/index.mjs",
   "miniprogram": "dist",
   "files": [
-    "dist/*"
+    "dist/index.cjs",
+    "dist/index.mjs",
+    "dist/index.d.ts",
+    "dist/index.cjs.map",
+    "dist/index.mjs.map"
   ],
   "types": "./dist/index.d.ts",
   "publishConfig": {
@@ -26,6 +30,7 @@
     "cross-env": "^7.0.3",
     "rollup": "^3.2.3",
     "rollup-obfuscator": "^4.0.0",
+    "rollup-plugin-dts": "^6.0.0",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-delete": "^2.0.0",
     "rollup-plugin-javascript-obfuscator": "^1.0.4",
