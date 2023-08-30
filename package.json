@@ -42,10 +42,5 @@
     "prettier": "^3.0.3",
     "prettier-eslint": "^15.0.1",
     "savage-rollup-config": "^0.0.11"
-  },
-  "lint-staged": {
-    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
-      "prettier --write"
-    ]
   }
 }
