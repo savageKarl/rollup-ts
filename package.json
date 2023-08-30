@@ -21,9 +21,11 @@
   "scripts": {
     "dev": "cross-env mode=dev rollup -c rollup.config.js --watch",
     "build": "cross-env mode=pro rollup -c rollup.config.js",
-    "prepublish": "npm run build",
-    "publish": "npm publish --access public",
-    "lint": "eslint ."
+    "prepush": "npm run build",
+    "push": "npm publish --access public",
+    "lint": "eslint .",
+    "prepare": "husky install",
+    "precommit": "lint-staged"
   },
   "license": "GPL-3.0",
   "devDependencies": {
@@ -36,9 +38,14 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^5.0.0",
     "eslint-plugin-promise": "^4.2.1",
+    "lint-staged": "^14.0.1",
     "prettier": "^3.0.3",
     "prettier-eslint": "^15.0.1",
     "savage-rollup-config": "^0.0.11"
   },
-  "dependencies": {}
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --write"
+    ]
+  }
 }
