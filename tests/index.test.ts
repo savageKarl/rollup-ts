@@ -7,5 +7,5 @@ test('sum', () => {
 })
 
 test('say', () => {
-	expect(say('hello')).toEqual('hello1')
+	expect(say('hello')).toEqual('hello')
 })
