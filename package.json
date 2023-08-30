@@ -25,7 +25,6 @@
     "push": "npm publish --access public",
     "lint": "eslint .",
     "prepare": "husky install",
-    "precommit": "lint-staged",
     "commit": "git-cz"
   },
   "config": {
