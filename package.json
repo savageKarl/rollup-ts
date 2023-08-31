@@ -24,7 +24,6 @@
     "prepush": "npm run build",
     "push": "npm publish --access public",
     "lint": "eslint .",
-    "prepare": "husky install",
     "commit": "git-cz"
   },
   "config": {
@@ -34,23 +33,7 @@
   },
   "license": "GPL-3.0",
   "devDependencies": {
-    "@commitlint/cli": "^17.7.1",
-    "@commitlint/config-conventional": "^17.7.0",
-    "@typescript-eslint/eslint-plugin": "^5.26.0",
-    "@typescript-eslint/parser": "^5.26.0",
-    "eslint": "^7.12.1",
-    "eslint-config-prettier": "^9.0.0",
-    "eslint-config-standard": "^16.0.3",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-prettier": "^5.0.0",
-    "eslint-plugin-promise": "^4.2.1",
-    "lint-staged": "^14.0.1",
-    "prettier": "^3.0.3",
-    "prettier-eslint": "^15.0.1",
-    "commitizen": "^4.3.0",
-    "cz-conventional-changelog": "^3.3.0",
-    "savage-rollup-config": "^0.0.11"
+    "savage-rollup-config": "^0.0.13"
   },
   "dependencies": {}
 }
