@@ -19,7 +19,7 @@
   },
   "type": "module",
   "scripts": {
-    "dev": "cross-env mode=dev rollup -c rollup.config.js --watch",
+    "dev": "cross-env mode=dev nodemon rollup.config.js",
     "build": "cross-env mode=pro rollup -c rollup.config.js",
     "prepush": "npm run build",
     "push": "npm publish --access public",
